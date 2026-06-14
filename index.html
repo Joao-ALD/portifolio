@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio pessoal - Interface Cyberpunk 2077">
+    <title>NETRUNNER.PROFILE // João Vítor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hud-overlay"></div>
+    <div class="scanlines"></div>
+
+    <header class="profile-header">
+        <div class="header-corner tl"></div>
+        <div class="header-corner tr"></div>
+        <div class="header-corner bl"></div>
+        <div class="header-corner br"></div>
+        
+        <div class="profile-container">
+            <div class="avatar-frame">
+                <!-- PLACEHOLDER: Substituir foto.jpg pela imagem real posteriormente -->
+                <img src="imagens/foto.jpg" alt="Profile Avatar" class="profile-avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="avatar-placeholder">
+                    <span class="avatar-initial">J</span>
+                </div>
+                <div class="avatar-status">ONLINE</div>
+            </div>
+            <div class="profile-info">
+                <h1 class="profile-name">JOÃO VÍTOR</h1>
+                <p class="profile-status">&gt;_ DESENVOLVEDOR CRIATIVO // SISTEMA OPERACIONAL: ATIVO</p>
+                <div class="profile-stats">
+                    <span class="stat-item">LVL 99</span>
+                    <span class="stat-divider">|</span>
+                    <span class="stat-item">EXP 12.847</span>
+                    <span class="stat-divider">|</span>
+                    <span class="stat-item">CREDIBILIDADE: MÁXIMA</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="tab-navigation" role="tablist" aria-label="Menu de navegação principal">
+        <button class="tab-btn active" role="tab" data-tab="sobre" aria-selected="true" aria-controls="sobre-panel">
+            <span class="tab-text">DATABASE</span>
+            <span class="tab-underline"></span>
+        </button>
+        <button class="tab-btn" role="tab" data-tab="curiosidades" aria-selected="false" aria-controls="curiosidades-panel">
+            <span class="tab-text">SHARDS</span>
+            <span class="tab-underline"></span>
+        </button>
+        <button class="tab-btn" role="tab" data-tab="hobbies" aria-selected="false" aria-controls="hobbies-panel">
+            <span class="tab-text">INTERESSES</span>
+            <span class="tab-underline"></span>
+        </button>
+        <button class="tab-btn" role="tab" data-tab="disciplinas" aria-selected="false" aria-controls="disciplinas-panel">
+            <span class="tab-text">SKILL TREE</span>
+            <span class="tab-underline"></span>
+        </button>
+        <button class="tab-btn" role="tab" data-tab="projetos" aria-selected="false" aria-controls="projetos-panel">
+            <span class="tab-text">INVENTÁRIO</span>
+            <span class="tab-underline"></span>
+        </button>
+    </nav>
+
+    <main class="content-wrapper">
+        <section id="sobre-panel" class="tab-panel active" role="tabpanel" aria-labelledby="sobre">
+            <div class="panel-header">
+                <h2 class="panel-title">DATABASE // PERFIL BIOGRÁFICO</h2>
+                <div class="panel-id">ID: BIO_001</div>
+            </div>
+            <div class="panel-body">
+                <div class="data-block">
+                    <div class="block-marker"></div>
+                    <p>Sou estudante de tecnologia apaixonado por criar experiências interativas que conectam pessoas e ideias. Natural de São Paulo, Brasil, atualmente curso a disciplina "Experiência Criativa e IA", onde exploro as interseções entre design, programação e inteligência artificial.</p>
+                </div>
+                <div class="data-block">
+                    <div class="block-marker"></div>
+                    <p>Minha jornada começou quando descobri que código não é apenas lógica - é uma forma de expressão artística. Desde então, venho desenvolvendo projetos que mesclam estética visual impactante com funcionalidade intuitiva, sempre buscando criar algo que surpreenda e engaje.</p>
+                </div>
+                <div class="data-block">
+                    <div class="block-marker"></div>
+                    <p>Acredito que a tecnologia deve ser acessível e inspiradora. Por isso, dedico meu tempo a aprender novas ferramentas, experimentar com diferentes plataformas e compartilhar conhecimento com a comunidade. Cada projeto é uma oportunidade de aprender, evoluir e deixar uma marca digital única.</p>
+                </div>
+                <div class="data-block">
+                    <div class="block-marker"></div>
+                    <p>Meu objetivo é me tornar um profissional que não apenas domina a técnica, mas também entende o impacto humano da tecnologia. Busco constantemente desafios que me tirem da zona de conforto e me permitam crescer como desenvolvedor e pessoa.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="curiosidades-panel" class="tab-panel" role="tabpanel" aria-labelledby="curiosidades">
+            <div class="panel-header">
+                <h2 class="panel-title">SHARDS // FRAGMENTOS DE DADOS</h2>
+                <div class="panel-id">ID: SHARD_LOG</div>
+            </div>
+            <div class="panel-body">
+                <ul class="shard-list">
+                    <li class="shard-item">
+                        <div class="shard-icon">◢</div>
+                        <div class="shard-content">
+                            <span class="shard-label">SHARD_001.txt</span>
+                            <p>Aprendi minha primeira linguagem de programação assistindo tutoriais no YouTube às 3h da manhã</p>
+                        </div>
+                    </li>
+                    <li class="shard-item">
+                        <div class="shard-icon">◢</div>
+                        <div class="shard-content">
+                            <span class="shard-label">SHARD_002.txt</span>
+                            <p>Tenho uma coleção de mais de 200 fontes tipográficas diferentes no meu computador</p>
+                        </div>
+                    </li>
+                    <li class="shard-item">
+                        <div class="shard-icon">◢</div>
+                        <div class="shard-content">
+                            <span class="shard-label">SHARD_003.txt</span>
+                            <p>Meu setup tem LEDs RGB sincronizados com o batimento do meu código no VS Code</p>
+                        </div>
+                    </li>
+                    <li class="shard-item">
+                        <div class="shard-icon">◢</div>
+                        <div class="shard-content">
+                            <span class="shard-label">SHARD_004.txt</span>
+                            <p>Já participei de 3 hackathons e sobrevivi à base de energia e pizza fria</p>
+                        </div>
+                    </li>
+                    <li class="shard-item">
+                        <div class="shard-icon">◢</div>
+                        <div class="shard-content">
+                            <span class="shard-label">SHARD_005.txt</span>
+                            <p>Consigo identificar paletas de cores hex apenas olhando para elas (quase um superpoder inútil)</p>
+                        </div>
+                    </li>
+                    <li class="shard-item hidden-shard" id="secretShard">
+                        <div class="shard-icon encrypted">◢</div>
+                        <div class="shard-content">
+                            <span class="shard-label">[ENCRYPTED]_SHARD_006.dat</span>
+                            <p>DESBLOQUEADO! Meu sonho é criar um jogo indie que faça as pessoas chorarem</p>
+                        </div>
+                    </li>
+                </ul>
+                <button id="decryptBtn" class="action-button" aria-label="Descriptografar shard oculto">
+                    <span class="btn-bracket">[</span>
+                    <span class="btn-text">DESCRIPTOGRAFAR SHARD</span>
+                    <span class="btn-bracket">]</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="hobbies-panel" class="tab-panel" role="tabpanel" aria-labelledby="hobbies">
+            <div class="panel-header">
+                <h2 class="panel-title">INTERESSES // ATIVIDADES REGISTRADAS</h2>
+                <div class="panel-id">ID: ACT_LOG</div>
+            </div>
+            <div class="panel-body">
+                <div class="hobby-grid">
+                    <article class="hobby-slot">
+                        <div class="slot-header">
+                            <span class="slot-id">[01]</span>
+                            <span class="slot-rarity">COMUM</span>
+                        </div>
+                        <div class="hobby-icon">🎮</div>
+                        <h3 class="hobby-name">GAMING</h3>
+                        <p class="hobby-desc">Explorador de mundos virtuais e colecionador de conquistas impossíveis</p>
+                    </article>
+                    <article class="hobby-slot">
+                        <div class="slot-header">
+                            <span class="slot-id">[02]</span>
+                            <span class="slot-rarity rare">RARO</span>
+                        </div>
+                        <div class="hobby-icon">🎨</div>
+                        <h3 class="hobby-name">DESIGN DIGITAL</h3>
+                        <p class="hobby-desc">Criação de interfaces e experimentação com estéticas futuristas</p>
+                    </article>
+                    <article class="hobby-slot">
+                        <div class="slot-header">
+                            <span class="slot-id">[03]</span>
+                            <span class="slot-rarity">COMUM</span>
+                        </div>
+                        <div class="hobby-icon">🎵</div>
+                        <h3 class="hobby-name">SYNTHWAVE</h3>
+                        <p class="hobby-desc">Ouvinte compulsivo de música eletrônica dos anos 80 reimaginada</p>
+                    </article>
+                    <article class="hobby-slot">
+                        <div class="slot-header">
+                            <span class="slot-id">[04]</span>
+                            <span class="slot-rarity rare">RARO</span>
+                        </div>
+                        <div class="hobby-icon">📚</div>
+                        <h3 class="hobby-name">FICÇÃO CIENTÍFICA</h3>
+                        <p class="hobby-desc">Leitor de Neuromancer, Blade Runner e qualquer distopia cyberpunk</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="disciplinas-panel" class="tab-panel" role="tabpanel" aria-labelledby="disciplinas">
+            <div class="panel-header">
+                <h2 class="panel-title">SKILL TREE // HABILIDADES ADQUIRIDAS</h2>
+                <div class="panel-id">ID: SKILL_MAP</div>
+            </div>
+            <div class="panel-body">
+                <div class="skill-grid">
+                    <article class="skill-node">
+                        <div class="skill-icon active">◆</div>
+                        <h3 class="skill-name">EXPERIÊNCIA CRIATIVA E IA</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                        <p class="skill-reason">Combina criatividade com tecnologia de ponta, permitindo explorar o futuro do design interativo</p>
+                    </article>
+                    <article class="skill-node">
+                        <div class="skill-icon active">◆</div>
+                        <h3 class="skill-name">DESENVOLVIMENTO WEB</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 88%"></div>
+                        </div>
+                        <p class="skill-reason">Transformar ideias em realidade através de código é simplesmente mágico</p>
+                    </article>
+                    <article class="skill-node">
+                        <div class="skill-icon active">◆</div>
+                        <h3 class="skill-name">DESIGN DE INTERFACES</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 92%"></div>
+                        </div>
+                        <p class="skill-reason">Aprender a criar experiências visuais que conectam emocionalmente com usuários</p>
+                    </article>
+                    <article class="skill-node">
+                        <div class="skill-icon active">◆</div>
+                        <h3 class="skill-name">PROGRAMAÇÃO ORIENTADA A OBJETOS</h3>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                        <p class="skill-reason">Estruturar pensamento lógico de forma elegante e escalável</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos-panel" class="tab-panel" role="tabpanel" aria-labelledby="projetos">
+            <div class="panel-header">
+                <h2 class="panel-title">INVENTÁRIO // PROJETOS ARMAZENADOS</h2>
+                <div class="panel-id">ID: INV_SLOT</div>
+            </div>
+            <div class="panel-body">
+                <div class="inventory-grid">
+                    <!-- PLACEHOLDER: Imagem construct.png será adicionada posteriormente. Container preparado com fallback visual -->
+                    <article class="inventory-slot">
+                        <div class="slot-frame">
+                            <div class="frame-corner tl"></div>
+                            <div class="frame-corner tr"></div>
+                            <div class="frame-corner bl"></div>
+                            <div class="frame-corner br"></div>
+                            <div class="slot-image-container">
+                                <img src="imagens/construct.png" alt="Preview do jogo Construct" class="slot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="slot-placeholder construct-placeholder">
+                                    <div class="placeholder-grid">
+                                        <div class="grid-line"></div>
+                                        <div class="grid-line"></div>
+                                        <div class="grid-line"></div>
+                                        <div class="grid-line"></div>
+                                    </div>
+                                    <span class="placeholder-text">CONSTRUCT</span>
+                                    <div class="loading-indicator"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slot-info">
+                            <div class="slot-header-info">
+                                <span class="slot-type">GAME_DEV</span>
+                                <span class="slot-quality legendary">LENDÁRIO</span>
+                            </div>
+                            <h3 class="slot-title">JOGO INTERATIVO CONSTRUCT</h3>
+                            <p class="slot-description">Jogo desenvolvido na plataforma Construct com mecânicas únicas, física realista e experiência visual imersiva. Projeto focado em gameplay envolvente e narrativa interativa.</p>
+                            <a href="#" class="slot-link" aria-label="Acessar projeto Construct">
+                                <span class="link-bracket">&gt;&gt;</span>
+                                <span class="link-text">CARREGAR PROJETO</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- PLACEHOLDER: Imagem processing.png será adicionada posteriormente. Container preparado com fallback visual -->
+                    <article class="inventory-slot">
+                        <div class="slot-frame">
+                            <div class="frame-corner tl"></div>
+                            <div class="frame-corner tr"></div>
+                            <div class="frame-corner bl"></div>
+                            <div class="frame-corner br"></div>
+                            <div class="slot-image-container">
+                                <img src="imagens/processing.png" alt="Preview do aplicativo Processing" class="slot-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="slot-placeholder processing-placeholder">
+                                    <div class="placeholder-grid">
+                                        <div class="grid-line"></div>
+                                        <div class="grid-line"></div>
+                                        <div class="grid-line"></div>
+                                        <div class="grid-line"></div>
+                                    </div>
+                                    <span class="placeholder-text">PROCESSING</span>
+                                    <div class="loading-indicator"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slot-info">
+                            <div class="slot-header-info">
+                                <span class="slot-type">CREATIVE_CODE</span>
+                                <span class="slot-quality epic">ÉPICO</span>
+                            </div>
+                            <h3 class="slot-title">APLICATIVO MULTIMÍDIA PROCESSING</h3>
+                            <p class="slot-description">Experiência multimídia desenvolvida em Processing combinando arte generativa, interatividade e visualização de dados. Projeto explorando as possibilidades criativas do código.</p>
+                            <a href="#" class="slot-link" aria-label="Acessar projeto Processing">
+                                <span class="link-bracket">&gt;&gt;</span>
+                                <span class="link-text">CARREGAR PROJETO</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="hud-footer">
+        <div class="footer-commands">
+            <span class="command-hint"><span class="key">ESC</span> SAIR</span>
+            <span class="command-hint"><span class="key">TAB</span> NAVEGAR</span>
+            <span class="command-hint"><span class="key">ENTER</span> CONFIRMAR</span>
+        </div>
+        <div class="footer-info">
+            <p class="footer-text">&copy; 2026 JOÃO VÍTOR // TODOS OS DIREITOS RESERVADOS</p>
+            <nav class="footer-links" aria-label="Links de contato">
+                <a href="mailto:joao@exemplo.com" class="footer-link" aria-label="Enviar e-mail">
+                    <span class="link-icon">✉</span> EMAIL
+                </a>
+                <a href="https://github.com/seuusuario" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Visitar GitHub">
+                    <span class="link-icon">◆</span> GITHUB
+                </a>
+                <a href="https://linkedin.com/in/seuusuario" target="_blank" rel="noopener noreferrer" class="footer-link" aria-label="Visitar LinkedIn">
+                    <span class="link-icon">◆</span> LINKEDIN
+                </a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
