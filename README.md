@@ -1,6 +1,6 @@
-# 🎮 Quem Sou Eu? - Portfólio Cyberpunk
+# 🎮 NETRUNNER.PROFILE // Portfólio Cyberpunk 2077
 
-Portfólio pessoal desenvolvido para a disciplina **Experiência Criativa e IA** com tema Cyberpunk e design futurista.
+Portfólio pessoal desenvolvido para a disciplina **Experiência Criativa e IA** com design inspirado na HUD e interface de inventário do Cyberpunk 2077.
 
 ## 🚀 Demo
 
@@ -11,8 +11,8 @@ Acesse o portfólio: [https://seuusuario.github.io/portfolio](https://seuusuario
 ```
 portfolio/
 ├── index.html          # Página principal (HTML5 semântico)
-├── style.css           # Estilização Cyberpunk com CSS3
-├── script.js           # Interações e efeitos JavaScript
+├── style.css           # Estilização Cyberpunk 2077 HUD
+├── script.js           # Sistema de abas e interações
 ├── README.md           # Documentação do projeto
 └── imagens/            # Assets visuais
     ├── foto.jpg        # Foto de perfil
@@ -20,31 +20,55 @@ portfolio/
     └── processing.png  # Preview do projeto Processing
 ```
 
-## 🎨 Características
+## 🎨 Características de Design
 
-- **Design Cyberpunk**: Paleta neon (Cyan, Magenta, Green) com fundos escuros
-- **HTML5 Semântico**: Tags `<header>`, `<main>`, `<section>`, `<article>`, `<footer>`
-- **CSS3 Moderno**: Flexbox, Grid, clip-path, gradientes e animações
-- **JavaScript Vanilla**: Interações funcionais sem dependências
-- **Acessibilidade**: Contraste WCAG, atributos ARIA, reduced motion
-- **Responsivo**: Layout adaptável para mobile, tablet e desktop
+### Réplica Fiel da HUD do Cyberpunk 2077
+- **Sistema de Abas**: Navegação inspirada no menu de inventário do jogo com sublinhado amarelo característico
+- **Paleta Oficial**: Amarelo (#fcee0a), Vermelho (#ff0055), Ciano (#00f0ff) sobre fundos escuros
+- **Bordas Chanfradas**: Uso extensivo de `clip-path: polygon()` para cantos cortados
+- **Scanlines CRT**: Efeito de linhas de varredura persistente e sutil
+- **Molduras Tecnológicas**: Cantos decorativos em todos os containers principais
+- **Tipografia**: Orbitron (títulos) e Rajdhani (corpo) via Google Fonts
 
 ## 🛠️ Tecnologias
 
-- HTML5
-- CSS3 (Custom Properties, Grid, Flexbox)
-- JavaScript (ES6+)
+- HTML5 Semântico
+- CSS3 (Custom Properties, Grid, Flexbox, clip-path)
+- JavaScript Vanilla (ES6+)
 - Google Fonts (Orbitron, Rajdhani)
 
 ## 📦 Seções Implementadas
 
-✅ **Header**: Avatar, nome e tagline  
-✅ **Sobre mim**: 4 parágrafos descritivos  
-✅ **Curiosidades**: Lista com 6 items (1 secreto)  
-✅ **Hobbies**: Grid com 4 cards ilustrados  
-✅ **Disciplinas Favoritas**: Grid com 4 matérias  
-✅ **Meus Projetos**: 2 cards (Construct + Processing)  
-✅ **Footer**: Copyright 2026 e redes sociais  
+✅ **Header/Profile**: Avatar com moldura, nome, status do sistema e estatísticas  
+✅ **Sistema de Abas**: 5 abas navegáveis (DATABASE, SHARDS, INTERESSES, SKILL TREE, INVENTÁRIO)  
+✅ **DATABASE**: 4 parágrafos biográficos com marcadores visuais  
+✅ **SHARDS**: Lista de 6 curiosidades (1 criptografado) com botão de descriptografar  
+✅ **INTERESSES**: Grid de 4 hobbies estilizados como slots de inventário  
+✅ **SKILL TREE**: 4 disciplinas com barras de progresso animadas  
+✅ **INVENTÁRIO**: 2 cards de projetos (Construct + Processing) com molduras e qualidade (Lendário/Épico)  
+✅ **Footer HUD**: Comandos de teclado simulados e links sociais  
+
+## 🎯 Funcionalidades Interativas
+
+### Sistema de Abas (Tab Navigation)
+Navegação fluida entre seções com transições suaves e suporte completo a teclado (Arrow Left/Right, Tab, ESC).
+
+### Botão "Descriptografar Shard"
+Revela a curiosidade oculta com:
+- Animação de processamento
+- Efeito typewriter no texto revelado
+- Scroll automático para o item desbloqueado
+- Possibilidade de re-criptografar
+
+### Suporte a Teclado
+- `ESC`: Retorna à primeira aba
+- `Tab`: Navega entre abas
+- `Arrow Left/Right`: Navegação nas abas quando focadas
+
+### Easter Eggs
+- **Console**: Digite `hackSystem()` no DevTools para executar protocolo especial
+- **Glitch no Nome**: O nome do perfil ocasionalmente sofre glitch visual aleatório
+- **Skill Bars**: Animação de preenchimento quando entram no viewport
 
 ## 🚀 Deploy no GitHub Pages
 
@@ -53,7 +77,7 @@ portfolio/
 ```bash
 git init
 git add .
-git commit -m "Initial commit - Portfólio Cyberpunk"
+git commit -m "Initial commit - Portfólio Cyberpunk 2077 HUD"
 git branch -M main
 git remote add origin https://github.com/seuusuario/portfolio.git
 git push -u origin main
@@ -75,60 +99,60 @@ O site estará disponível em 2-3 minutos em:
 
 ### Imagens (obrigatório)
 
-Adicione na pasta `imagens/`:
-- `foto.jpg` - Sua foto de perfil (recomendado: 400x400px)
+Crie a pasta `imagens/` e adicione:
+- `foto.jpg` - Sua foto de perfil (recomendado: 400x400px, formato quadrado)
 - `construct.png` - Screenshot do projeto Construct
 - `processing.png` - Screenshot do projeto Processing
 
 ### Dados Pessoais (index.html)
 
-1. **Linha 27**: Altere `João Vítor` para seu nome
-2. **Linha 27**: Altere letra no `data-text` e dentro do `<h1>`
-3. **Linha 28**: Personalize a tagline
-4. **Linhas 35-42**: Edite parágrafos "Sobre mim"
-5. **Linhas 50-70**: Customize curiosidades
-6. **Linhas 105-112**: Ajuste disciplinas favoritas
-7. **Linhas 125 e 149**: Adicione URLs reais dos projetos
-8. **Linhas 166-178**: Atualize links de redes sociais
+**Localização das modificações:**
+
+1. **Linha 39**: Altere `JOÃO VÍTOR` para seu nome
+2. **Linha 40**: Personalize o status do sistema
+3. **Linhas 42-46**: Ajuste as estatísticas (LVL, EXP, CREDIBILIDADE)
+4. **Linhas 76-97**: Edite os 4 parágrafos da seção DATABASE
+5. **Linhas 109-141**: Customize as 6 curiosidades (shards)
+6. **Linhas 172-209**: Ajuste os 4 hobbies
+7. **Linhas 223-258**: Modifique as 4 disciplinas favoritas
+8. **Linhas 273 e 316**: Adicione URLs reais dos projetos (`href="#"`)
+9. **Linhas 376-384**: Atualize e-mail e links de redes sociais
 
 ### Links dos Projetos
 
-Edite os atributos `href` dos links:
-- **Construct**: Linha 132 (`<a href="#"` → `<a href="URL_DO_PROJETO"`)
-- **Processing**: Linha 156 (`<a href="#"` → `<a href="URL_DO_PROJETO"`)
+Edite os atributos `href` nas linhas:
+- **Construct**: Linha 294 (`<a href="#"` → `<a href="URL_REAL"`)
+- **Processing**: Linha 337 (`<a href="#"` → `<a href="URL_REAL"`)
 
 ### Redes Sociais (footer)
 
-- **Email**: Linha 168 (`mailto:joao@exemplo.com`)
-- **GitHub**: Linha 172 (`https://github.com/seuusuario`)
-- **LinkedIn**: Linha 176 (`https://linkedin.com/in/seuusuario`)
-
-## 🎯 Funcionalidades Interativas
-
-### Botão Segredo
-Clique em **"DESBLOQUEAR_SEGREDO.exe"** para revelar a curiosidade oculta com efeito glitch.
-
-### Easter Egg no Console
-Abra o DevTools (`F12`) e digite `reveal()` para ativar um comando secreto.
-
-### Efeito Glitch no Título
-Passe o mouse sobre seu nome no header para ver o efeito de terminal.
-
-### Microinterações
-- Hover nos cards com translação e brilho
-- Parallax sutil no background ao scroll
-- Animações de reveal nas seções
+- **Email**: Linha 376 (`mailto:joao@exemplo.com`)
+- **GitHub**: Linha 379 (`https://github.com/seuusuario`)
+- **LinkedIn**: Linha 382 (`https://linkedin.com/in/seuusuario`)
 
 ## ✅ Critérios de Avaliação Atendidos
 
-- ✅ HTML semântico completo
-- ✅ CSS moderno com variáveis e efeitos
-- ✅ JavaScript funcional (botão interativo)
-- ✅ Acessibilidade (ARIA, contraste, reduced motion)
-- ✅ Design Cyberpunk autêntico
-- ✅ Estrutura preparada para GitHub Pages
-- ✅ 2 cards de projetos (Construct + Processing)
-- ✅ Placeholders visuais em SVG para imagens
+- ✅ HTML5 semântico completo (`<header>`, `<main>`, `<section>`, `<article>`, `<nav>`, `<footer>`)
+- ✅ CSS3 moderno com variáveis, clip-path, gradientes e animações
+- ✅ JavaScript funcional com sistema de abas completo e botão interativo
+- ✅ Acessibilidade (ARIA, navegação por teclado, prefers-reduced-motion, contraste WCAG)
+- ✅ Design fiel à HUD do Cyberpunk 2077
+- ✅ Estrutura preparada para GitHub Pages com caminhos relativos
+- ✅ 2 cards de projetos estruturados (Construct + Processing)
+- ✅ Placeholders visuais animados para imagens
+
+## 🎮 Elementos da HUD do Cyberpunk 2077 Implementados
+
+- ✅ Sistema de abas com sublinhado amarelo e marcadores nos cantos
+- ✅ Molduras com cantos chanfrados via clip-path
+- ✅ Decorações de canto em formato de "L" nos containers principais
+- ✅ Paleta de cores oficial (amarelo, ciano, vermelho)
+- ✅ Scanlines CRT sutis em toda a página
+- ✅ Slots de inventário com qualidade (Lendário, Épico, Raro, Comum)
+- ✅ Barras de progresso nas skills com gradiente ciano-amarelo
+- ✅ Comandos de teclado no footer (ESC, TAB, ENTER)
+- ✅ Tipografia geométrica em caixa alta
+- ✅ Efeitos de glitch e animações sutis
 
 ## 📄 Licença
 
@@ -136,4 +160,4 @@ Projeto educacional desenvolvido para a disciplina Experiência Criativa e IA - 
 
 ---
 
-**Desenvolvido com 💜 e ⚡ por João Vítor**
+**SISTEMA OPERACIONAL: ATIVO // DESENVOLVIDO POR JOÃO VÍTOR // 2026**

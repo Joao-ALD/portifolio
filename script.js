@@ -1,116 +1,227 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Interação obrigatória: Botão que revela curiosidade secreta
-  const revealBtn = document.getElementById('revealBtn');
-  const secretCuriosity = document.getElementById('secretCuriosity');
-  let isRevealed = false;
+  // Sistema de Abas (Tab Navigation) - Interação obrigatória
+  const tabButtons = document.querySelectorAll('.tab-btn');
+  const tabPanels = document.querySelectorAll('.tab-panel');
 
-  if (revealBtn && secretCuriosity) {
-    revealBtn.addEventListener('click', () => {
-      if (!isRevealed) {
-        secretCuriosity.style.display = 'flex';
-        revealBtn.querySelector('.btn-text').textContent = 'SEGREDO_REVELADO.exe';
-        revealBtn.style.background = 'linear-gradient(135deg, #00ff41, #00ffff)';
-        isRevealed = true;
-        
-        // Scroll suave até a curiosidade revelada
+  function switchTab(targetTab) {
+    // Remove active de todos os botões e painéis
+    tabButtons.forEach(btn => {
+      btn.classList.remove('active');
+      btn.setAttribute('aria-selected', 'false');
+    });
+    tabPanels.forEach(panel => {
+      panel.classList.remove('active');
+    });
+
+    // Adiciona active ao botão e painel selecionados
+    const activeButton = document.querySelector(`[data-tab="${targetTab}"]`);
+    const activePanel = document.getElementById(`${targetTab}-panel`);
+
+    if (activeButton && activePanel) {
+      activeButton.classList.add('active');
+      activeButton.setAttribute('aria-selected', 'true');
+      activePanel.classList.add('active');
+
+      // Scroll suave para o topo do conteúdo
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+  }
+
+  // Event listeners para os botões de abas
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetTab = button.getAttribute('data-tab');
+      switchTab(targetTab);
+    });
+
+    // Suporte a navegação por teclado
+    button.addEventListener('keydown', (e) => {
+      const currentIndex = Array.from(tabButtons).indexOf(button);
+      let targetIndex;
+
+      if (e.key === 'ArrowRight') {
+        targetIndex = (currentIndex + 1) % tabButtons.length;
+        tabButtons[targetIndex].focus();
+        e.preventDefault();
+      } else if (e.key === 'ArrowLeft') {
+        targetIndex = (currentIndex - 1 + tabButtons.length) % tabButtons.length;
+        tabButtons[targetIndex].focus();
+        e.preventDefault();
+      }
+    });
+  });
+
+  // Botão de Descriptografar Shard - Interação funcional
+  const decryptBtn = document.getElementById('decryptBtn');
+  const secretShard = document.getElementById('secretShard');
+  let isDecrypted = false;
+
+  if (decryptBtn && secretShard) {
+    decryptBtn.addEventListener('click', () => {
+      if (!isDecrypted) {
+        // Efeito de processamento
+        decryptBtn.querySelector('.btn-text').textContent = 'DESCRIPTOGRAFANDO...';
+        decryptBtn.disabled = true;
+
         setTimeout(() => {
-          secretCuriosity.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }, 100);
+          // Revela o shard com animação
+          secretShard.style.display = 'flex';
+          secretShard.style.animation = 'glitchReveal 0.6s ease';
+          
+          // Atualiza o botão
+          decryptBtn.querySelector('.btn-text').textContent = 'SHARD DESBLOQUEADO';
+          decryptBtn.style.borderColor = 'var(--cp-cyan)';
+          decryptBtn.style.color = 'var(--cp-cyan)';
+          decryptBtn.disabled = false;
+          isDecrypted = true;
+
+          // Scroll até o shard revelado
+          setTimeout(() => {
+            secretShard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 200);
+
+          // Efeito typewriter no conteúdo do shard
+          typewriterEffect(secretShard.querySelector('p'));
+        }, 1500);
       } else {
-        secretCuriosity.style.display = 'none';
-        revealBtn.querySelector('.btn-text').textContent = 'DESBLOQUEAR_SEGREDO.exe';
-        revealBtn.style.background = 'linear-gradient(135deg, #ff00ff, #00ffff)';
-        isRevealed = false;
+        // Oculta novamente
+        secretShard.style.display = 'none';
+        decryptBtn.querySelector('.btn-text').textContent = 'DESCRIPTOGRAFAR SHARD';
+        decryptBtn.style.borderColor = 'var(--cp-yellow)';
+        decryptBtn.style.color = 'var(--cp-yellow)';
+        isDecrypted = false;
       }
     });
   }
 
-  // Efeito de terminal typing no título (opcional, mas melhora UX)
-  const glitchText = document.querySelector('.glitch-text');
-  if (glitchText) {
-    const originalText = glitchText.textContent;
-    glitchText.setAttribute('data-text', originalText);
-    
-    // Efeito glitch aleatório no hover
-    glitchText.addEventListener('mouseenter', () => {
-      let iterations = 0;
-      const maxIterations = 3;
-      
-      const glitchInterval = setInterval(() => {
-        glitchText.textContent = originalText
-          .split('')
-          .map((char, index) => {
-            if (index < iterations) return originalText[index];
-            return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-          })
-          .join('');
-        
-        iterations += 1/3;
-        
-        if (iterations >= originalText.length) {
-          clearInterval(glitchInterval);
-          glitchText.textContent = originalText;
-        }
-      }, 30);
-    });
+  // Efeito Typewriter
+  function typewriterEffect(element) {
+    const originalText = element.textContent;
+    element.textContent = '';
+    let charIndex = 0;
+
+    const typeInterval = setInterval(() => {
+      if (charIndex < originalText.length) {
+        element.textContent += originalText.charAt(charIndex);
+        charIndex++;
+      } else {
+        clearInterval(typeInterval);
+      }
+    }, 30);
   }
 
-  // Smooth reveal para seções ao scroll
+  // Suporte a navegação por teclado no footer (simulação de comandos)
+  document.addEventListener('keydown', (e) => {
+    // ESC - Volta para primeira aba
+    if (e.key === 'Escape') {
+      switchTab('sobre');
+    }
+    
+    // Tab - Navega entre abas (quando não em campo de input)
+    if (e.key === 'Tab' && e.target === document.body) {
+      e.preventDefault();
+      const currentActive = document.querySelector('.tab-btn.active');
+      const currentIndex = Array.from(tabButtons).indexOf(currentActive);
+      const nextIndex = (currentIndex + 1) % tabButtons.length;
+      const nextTab = tabButtons[nextIndex].getAttribute('data-tab');
+      switchTab(nextTab);
+    }
+  });
+
+  // Animação de entrada nas skill bars
   const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0.3,
+    rootMargin: '0px'
   };
 
-  const sectionObserver = new IntersectionObserver((entries) => {
+  const skillObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = '0';
-        entry.target.style.transform = 'translateY(30px)';
-        
-        setTimeout(() => {
-          entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }, 100);
-        
-        sectionObserver.unobserve(entry.target);
+        const progressBar = entry.target.querySelector('.skill-progress');
+        if (progressBar) {
+          const targetWidth = progressBar.style.width;
+          progressBar.style.width = '0%';
+          setTimeout(() => {
+            progressBar.style.width = targetWidth;
+          }, 100);
+        }
+        skillObserver.unobserve(entry.target);
       }
     });
   }, observerOptions);
 
-  document.querySelectorAll('.section-panel').forEach(section => {
-    sectionObserver.observe(section);
+  document.querySelectorAll('.skill-node').forEach(node => {
+    skillObserver.observe(node);
   });
 
-  // Efeito parallax sutil no background (performance otimizada)
-  let ticking = false;
-  
-  window.addEventListener('scroll', () => {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        const scrolled = window.pageYOffset;
-        document.body.style.backgroundPositionY = `${scrolled * 0.3}px`;
-        ticking = false;
-      });
-      ticking = true;
-    }
-  });
+  // Console easter egg (estilo Cyberpunk 2077)
+  console.log('%c╔════════════════════════════════════╗', 'color: #fcee0a; font-weight: bold;');
+  console.log('%c║   SISTEMA NETRUNNER INICIALIZADO  ║', 'color: #fcee0a; font-weight: bold;');
+  console.log('%c╚════════════════════════════════════╝', 'color: #fcee0a; font-weight: bold;');
+  console.log('%c> STATUS: ONLINE', 'color: #00f0ff; font-weight: bold;');
+  console.log('%c> PROTOCOLO: ATIVO', 'color: #00f0ff; font-weight: bold;');
+  console.log('%c> ACESSO: AUTORIZADO', 'color: #00f0ff; font-weight: bold;');
+  console.log('%c', ''); // linha em branco
+  console.log('%c[COMANDO DISPONÍVEL]', 'color: #ff0055; font-weight: bold;');
+  console.log('%cDigite hackSystem() para executar protocolo especial...', 'color: #8f8f8f;');
 
-  // Console easter egg
-  console.log('%c🎮 SISTEMA INICIADO', 'color: #00ffff; font-size: 20px; font-weight: bold; text-shadow: 0 0 10px #00ffff;');
-  console.log('%cVocê encontrou um easter egg! Desenvolvedor curioso detectado.', 'color: #ff00ff; font-size: 14px;');
-  console.log('%cDigite reveal() no console para desbloquear algo especial...', 'color: #00ff41; font-size: 12px;');
-  
-  window.reveal = () => {
-    console.log('%c✨ ACESSO CONCEDIDO ✨', 'color: #00ff41; font-size: 16px; font-weight: bold;');
-    console.log('%cMensagem secreta: Continue explorando, criando e nunca pare de aprender!', 'color: #00ffff; font-size: 14px;');
+  // Função secreta do console
+  window.hackSystem = () => {
+    console.log('%c', '');
+    console.log('%c▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓', 'color: #fcee0a; font-weight: bold;');
+    console.log('%c  HACK INICIADO...', 'color: #ff0055; font-weight: bold;');
+    console.log('%c▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓', 'color: #fcee0a; font-weight: bold;');
+    console.log('%c', '');
     
-    if (secretCuriosity && !isRevealed) {
-      secretCuriosity.style.display = 'flex';
-      revealBtn.querySelector('.btn-text').textContent = 'SEGREDO_REVELADO.exe';
-      revealBtn.style.background = 'linear-gradient(135deg, #00ff41, #00ffff)';
-      isRevealed = true;
-      secretCuriosity.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    }
+    setTimeout(() => {
+      console.log('%c> Acessando banco de dados...', 'color: #00f0ff;');
+    }, 500);
+    
+    setTimeout(() => {
+      console.log('%c> Descriptografando arquivos...', 'color: #00f0ff;');
+    }, 1000);
+    
+    setTimeout(() => {
+      console.log('%c> ACESSO CONCEDIDO!', 'color: #00ff41; font-weight: bold; font-size: 14px;');
+      console.log('%c', '');
+      console.log('%cMensagem secreta desbloqueada:', 'color: #fcee0a; font-weight: bold;');
+      console.log('%c"Continue criando, aprendendo e explorando. O futuro é construído por aqueles que ousam imaginar."', 'color: #00f0ff; font-style: italic;');
+      console.log('%c', '');
+      
+      // Desbloqueia o shard automaticamente
+      if (secretShard && !isDecrypted) {
+        switchTab('curiosidades');
+        setTimeout(() => {
+          decryptBtn.click();
+        }, 500);
+      }
+    }, 1500);
   };
+
+  // Efeito de glitch aleatório no nome do perfil
+  const profileName = document.querySelector('.profile-name');
+  if (profileName) {
+    const originalName = profileName.textContent;
+    
+    setInterval(() => {
+      if (Math.random() > 0.95) { // 5% de chance a cada 3 segundos
+        const glitchChars = '◆◇◈◉○◌◍◎●';
+        let glitchedName = originalName.split('').map((char, index) => {
+          if (Math.random() > 0.7 && char !== ' ') {
+            return glitchChars[Math.floor(Math.random() * glitchChars.length)];
+          }
+          return char;
+        }).join('');
+        
+        profileName.textContent = glitchedName;
+        
+        setTimeout(() => {
+          profileName.textContent = originalName;
+        }, 100);
+      }
+    }, 3000);
+  }
 });
