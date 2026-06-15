@@ -1,10 +1,10 @@
-# 🎮 NETRUNNER.PROFILE // Portfólio Cyberpunk 2077
+# 🎮 Portfólio estilo Cyberpunk 
 
 Portfólio pessoal desenvolvido para a disciplina **Experiência Criativa e IA** com design inspirado na HUD e interface de inventário do Cyberpunk 2077.
 
 ## 🚀 Demo
 
-Acesse o portfólio: [https://seuusuario.github.io/portfolio](https://seuusuario.github.io/portfolio)
+Acesse o portfólio: [https://Joao-ALD.github.io/portfolio](https://Joao-ALD.github.io/portfolio)
 
 ## 📁 Estrutura do Projeto
 
@@ -22,7 +22,7 @@ portfolio/
 
 ## 🎨 Características de Design
 
-### Réplica Fiel da HUD do Cyberpunk 2077
+### Réplica Fiel da HUD do Cyberpunk
 - **Sistema de Abas**: Navegação inspirada no menu de inventário do jogo com sublinhado amarelo característico
 - **Paleta Oficial**: Amarelo (#fcee0a), Vermelho (#ff0055), Ciano (#00f0ff) sobre fundos escuros
 - **Bordas Chanfradas**: Uso extensivo de `clip-path: polygon()` para cantos cortados
@@ -108,7 +108,7 @@ Crie a pasta `imagens/` e adicione:
 
 **Localização das modificações:**
 
-1. **Linha 39**: Altere `JOÃO VÍTOR` para seu nome
+1. **Linha 39**: Altere `JOÃO VICTOR` para seu nome
 2. **Linha 40**: Personalize o status do sistema
 3. **Linhas 42-46**: Ajuste as estatísticas (LVL, EXP, CREDIBILIDADE)
 4. **Linhas 76-97**: Edite os 4 parágrafos da seção DATABASE
@@ -160,4 +160,4 @@ Projeto educacional desenvolvido para a disciplina Experiência Criativa e IA - 
 
 ---
 
-**SISTEMA OPERACIONAL: ATIVO // DESENVOLVIDO POR JOÃO VÍTOR // 2026**
+**SISTEMA OPERACIONAL: ATIVO // DESENVOLVIDO POR JOÃO VICTOR // 2026**
