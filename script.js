@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
     skillObserver.observe(node);
   });
 
-  // Console easter egg (estilo Cyberpunk 2077)
+  // Console easter egg (estilo Cyberpunk)
   console.log('%c╔════════════════════════════════════╗', 'color: #fcee0a; font-weight: bold;');
   console.log('%c║   SISTEMA NETRUNNER INICIALIZADO  ║', 'color: #fcee0a; font-weight: bold;');
   console.log('%c╚════════════════════════════════════╝', 'color: #fcee0a; font-weight: bold;');

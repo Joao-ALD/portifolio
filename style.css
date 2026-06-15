@@ -565,6 +565,14 @@ body {
   color: var(--cp-cyan);
 }
 
+.slot-rarity.epic {
+  color: #b459ff;
+}
+
+.slot-rarity.legendary {
+  color: var(--cp-yellow);
+}
+
 .hobby-icon {
   font-size: 2.5rem;
   text-align: center;
@@ -832,10 +840,12 @@ body {
 
 .slot-quality.legendary {
   color: var(--cp-yellow);
+  text-shadow: 0 0 8px var(--cp-yellow);
 }
 
 .slot-quality.epic {
-  color: var(--cp-cyan);
+  color: #b459ff;
+  text-shadow: 0 0 8px #b459ff;
 }
 
 .slot-title {
