@@ -14,10 +14,10 @@ portfolio/
 ├── style.css           # Estilização Cyberpunk 2077 HUD
 ├── script.js           # Sistema de abas e interações
 ├── README.md           # Documentação do projeto
-└── imagens/            # Assets visuais
+└── assets/img/            # Assets visuais
     ├── foto.jpg        # Foto de perfil
-    ├── construct.png   # Preview do projeto Construct
-    └── processing.png  # Preview do projeto Processing
+    ├── construct.jpeg   # Preview do projeto Construct
+    └── processing.jpeg  # Preview do projeto Processing
 ```
 
 ## 🎨 Características de Design
@@ -99,10 +99,10 @@ O site estará disponível em 2-3 minutos em:
 
 ### Imagens (obrigatório)
 
-Crie a pasta `imagens/` e adicione:
+Crie a pasta `assets/img/` e adicione:
 - `foto.jpg` - Sua foto de perfil (recomendado: 400x400px, formato quadrado)
-- `construct.png` - Screenshot do projeto Construct
-- `processing.png` - Screenshot do projeto Processing
+- `construct.jpeg` - Screenshot do projeto Construct
+- `processing.jpeg` - Screenshot do projeto Processing
 
 ### Dados Pessoais (index.html)
 
@@ -126,9 +126,9 @@ Edite os atributos `href` nas linhas:
 
 ### Redes Sociais (footer)
 
-- **Email**: Linha 376 (`mailto:joao@exemplo.com`)
-- **GitHub**: Linha 379 (`https://github.com/seuusuario`)
-- **LinkedIn**: Linha 382 (`https://linkedin.com/in/seuusuario`)
+- **Email**: Linha 376 (`mailto:joaovictorald@gmail.com`)
+- **GitHub**: Linha 379 (`https://github.com/Joao-ALD`)
+- **LinkedIn**: Linha 382 (`https://linkedin.com/in/Joao-ALD`)
 
 ## ✅ Critérios de Avaliação Atendidos
 
