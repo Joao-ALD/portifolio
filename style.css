@@ -978,53 +978,505 @@ body {
   .profile-header {
     margin: 10px;
     padding: 20px;
+    clip-path: polygon(
+      0 0,
+      calc(100% - 12px) 0,
+      100% 12px,
+      100% 100%,
+      12px 100%,
+      0 calc(100% - 12px)
+    );
   }
 
   .profile-container {
     flex-direction: column;
     text-align: center;
+    gap: 20px;
+  }
+
+  .avatar-frame {
+    margin: 0 auto;
+  }
+
+  .profile-name {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+
+  .profile-stats {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 0.85rem;
+  }
+
+  .stat-divider {
+    display: none;
   }
 
   .tab-navigation {
     margin: 0 10px;
     padding: 0 10px;
+    gap: 4px;
   }
 
   .tab-btn {
-    font-size: 0.85rem;
-    padding: 14px 16px;
+    font-size: 0.75rem;
+    padding: 14px 12px;
+    letter-spacing: 1px;
+  }
+
+  .tab-text {
+    font-size: 0.7rem;
   }
 
   .content-wrapper {
     margin: 10px;
   }
 
-  .panel-body {
-    padding: 20px;
+  .panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 14px 18px;
   }
 
-  .inventory-grid,
+  .panel-title {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  .panel-id {
+    font-size: 0.7rem;
+  }
+
+  .panel-body {
+    padding: 20px 16px;
+  }
+
+  .hud-marker {
+    font-size: 0.5rem;
+  }
+
+  .hud-marker.top-left {
+    top: 6px;
+    left: 6px;
+  }
+
+  .hud-marker.top-right {
+    top: 6px;
+    right: 6px;
+  }
+
+  .hud-marker.bottom-left {
+    bottom: 6px;
+    left: 6px;
+  }
+
+  .hud-marker.bottom-right {
+    bottom: 6px;
+    right: 6px;
+  }
+
+  /* Database Section */
+  .data-block {
+    padding-left: 16px;
+    margin-bottom: 16px;
+  }
+
+  .data-block p {
+    font-size: 0.95rem;
+  }
+
+  /* Shards */
+  .shard-list {
+    gap: 12px;
+  }
+
+  .shard-item {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .shard-icon {
+    font-size: 1.2rem;
+  }
+
+  .shard-label {
+    font-size: 0.75rem;
+  }
+
+  .shard-item p {
+    font-size: 0.88rem;
+  }
+
+  .action-button {
+    padding: 12px 20px;
+    font-size: 0.8rem;
+  }
+
+  /* Hobbies */
   .hobby-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .hobby-slot {
+    padding: 16px;
+  }
+
+  .hobby-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .hobby-name {
+    font-size: 1rem;
+  }
+
+  .hobby-desc {
+    font-size: 0.85rem;
+  }
+
+  /* Skills */
+  .skill-grid {
+    gap: 16px;
+  }
+
+  .skill-node {
+    padding: 16px;
+  }
+
+  .skill-name {
+    font-size: 1rem;
+  }
+
+  .skill-reason {
+    font-size: 0.88rem;
+  }
+
+  /* Inventory */
+  .inventory-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .slot-frame {
+    height: 200px;
+  }
+
+  .frame-corner {
+    width: 12px;
+    height: 12px;
+  }
+
+  .placeholder-text {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .slot-info {
+    padding: 16px;
+  }
+
+  .slot-title {
+    font-size: 1.05rem;
+  }
+
+  .slot-description {
+    font-size: 0.88rem;
+  }
+
+  .slot-link {
+    font-size: 0.8rem;
+  }
+
+  /* Footer */
+  .hud-footer {
+    margin: 20px 10px 10px;
+    padding: 20px 16px;
   }
 
   .footer-commands {
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+  }
+
+  .command-hint {
+    font-size: 0.75rem;
+  }
+
+  .key {
+    padding: 2px 6px;
+    font-size: 0.7rem;
   }
 
   .footer-info {
     flex-direction: column;
     text-align: center;
+    gap: 16px;
+  }
+
+  .footer-text {
+    font-size: 0.75rem;
   }
 
   .footer-links {
     flex-direction: column;
     width: 100%;
+    gap: 10px;
+  }
+
+  .footer-link {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* Tablet (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .profile-header {
+    margin: 15px;
+    padding: 25px;
+  }
+
+  .profile-name {
+    font-size: 2.2rem;
+  }
+
+  .tab-btn {
+    font-size: 0.9rem;
+    padding: 16px 20px;
+  }
+
+  .content-wrapper {
+    margin: 15px;
+  }
+
+  .panel-body {
+    padding: 25px;
+  }
+
+  .hobby-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .inventory-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
   }
 
   .hud-footer {
-    margin: 20px 10px 10px;
+    margin: 30px 15px 15px;
+  }
+}
+
+/* Large screens (1400px+) */
+@media (min-width: 1400px) {
+  .profile-header,
+  .tab-navigation,
+  .content-wrapper,
+  .hud-footer {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tab-navigation {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .content-wrapper {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .inventory-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Ultra-wide screens (1920px+) */
+@media (min-width: 1920px) {
+  .profile-header,
+  .tab-navigation,
+  .content-wrapper,
+  .hud-footer {
+    max-width: 1600px;
+  }
+
+  .profile-name {
+    font-size: 3.2rem;
+  }
+
+  .panel-title {
+    font-size: 1.6rem;
+  }
+
+  .hobby-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Small phones (max 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .profile-header {
+    padding: 16px;
+  }
+
+  .header-corner {
+    width: 8px;
+    height: 8px;
+  }
+
+  .avatar-frame,
+  .profile-avatar,
+  .avatar-placeholder {
+    width: 100px;
+    height: 100px;
+  }
+
+  .avatar-initial {
+    font-size: 2.5rem;
+  }
+
+  .avatar-status {
+    font-size: 0.6rem;
+    padding: 2px 8px;
+  }
+
+  .profile-name {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .profile-status {
+    font-size: 0.85rem;
+  }
+
+  .profile-stats {
+    font-size: 0.75rem;
+  }
+
+  .tab-btn {
+    padding: 12px 10px;
+    font-size: 0.7rem;
+  }
+
+  .panel-header {
+    padding: 12px 14px;
+  }
+
+  .panel-title {
+    font-size: 0.95rem;
+  }
+
+  .panel-body {
+    padding: 16px 12px;
+  }
+
+  .hud-marker {
+    font-size: 0.45rem;
+    letter-spacing: 0.5px;
+  }
+
+  .data-block p,
+  .shard-item p,
+  .hobby-desc,
+  .skill-reason,
+  .slot-description {
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+
+  .action-button {
+    padding: 10px 16px;
+    font-size: 0.75rem;
+  }
+
+  .slot-frame {
+    height: 180px;
+  }
+
+  .placeholder-text {
+    font-size: 0.9rem;
+  }
+
+  .loading-indicator {
+    width: 50px;
+  }
+
+  .footer-commands {
+    gap: 8px;
+  }
+
+  .command-hint {
+    font-size: 0.7rem;
+  }
+}
+
+/* Landscape orientation for phones */
+@media (max-height: 600px) and (orientation: landscape) {
+  .profile-header {
+    padding: 16px;
+  }
+
+  .profile-container {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .avatar-frame,
+  .profile-avatar,
+  .avatar-placeholder {
+    width: 80px;
+    height: 80px;
+  }
+
+  .avatar-initial {
+    font-size: 2rem;
+  }
+
+  .profile-name {
+    font-size: 1.6rem;
+  }
+
+  .profile-info {
+    text-align: left;
+  }
+
+  .tab-navigation {
+    padding: 0 10px;
+  }
+
+  .tab-btn {
+    padding: 10px 16px;
+  }
+
+  .panel-body {
+    padding: 20px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .scanlines {
+    background-size: 100% 4px;
+  }
+
+  .profile-avatar,
+  .avatar-placeholder,
+  .slot-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
   }
 }
 
