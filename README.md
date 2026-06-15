@@ -128,7 +128,7 @@ Edite os atributos `href` nas linhas:
 
 - **Email**: Linha 376 (`mailto:joaovictorald@gmail.com`)
 - **GitHub**: Linha 379 (`https://github.com/Joao-ALD`)
-- **LinkedIn**: Linha 382 (`https://linkedin.com/in/Joao-ALD`)
+- **LinkedIn**: Linha 382 (`[https://linkedin.com/in/Joao-ALD](https://www.linkedin.com/in/jo%C3%A3o-victor-ara%C3%BAjo-louren%C3%A7o-domingues/)`)
 
 ## ✅ Critérios de Avaliação Atendidos
 
