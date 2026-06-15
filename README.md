@@ -1,6 +1,6 @@
 # 🎮 Portfólio estilo Cyberpunk 
 
-Portfólio pessoal desenvolvido para a disciplina **Experiência Criativa e IA** com design inspirado na HUD e interface de inventário do Cyberpunk 2077.
+Portfólio pessoal desenvolvido para a disciplina **Experiência Criativa e IA** com design inspirado na   e interface de inventário do Cyberpunk.
 
 ## 🚀 Demo
 
@@ -11,7 +11,7 @@ Acesse o portfólio: [https://joao-ald.github.io/portifolio/](https://joao-ald.g
 ```
 portfolio/
 ├── index.html          # Página principal (HTML5 semântico)
-├── style.css           # Estilização Cyberpunk 2077 HUD
+├── style.css           # Estilização Cyberpunk  
 ├── script.js           # Sistema de abas e interações
 ├── README.md           # Documentação do projeto
 └── assets/img/            # Assets visuais
@@ -22,7 +22,7 @@ portfolio/
 
 ## 🎨 Características de Design
 
-### Réplica Fiel da HUD do Cyberpunk
+### Réplica Fiel da   do Cyberpunk
 - **Sistema de Abas**: Navegação inspirada no menu de inventário do jogo com sublinhado amarelo característico
 - **Paleta Oficial**: Amarelo (#fcee0a), Vermelho (#ff0055), Ciano (#00f0ff) sobre fundos escuros
 - **Bordas Chanfradas**: Uso extensivo de `clip-path: polygon()` para cantos cortados
@@ -46,7 +46,7 @@ portfolio/
 ✅ **INTERESSES**: Grid de 4 hobbies estilizados como slots de inventário  
 ✅ **SKILL TREE**: 4 disciplinas com barras de progresso animadas  
 ✅ **INVENTÁRIO**: 2 cards de projetos (Construct + Processing) com molduras e qualidade (Lendário/Épico)  
-✅ **Footer HUD**: Comandos de teclado simulados e links sociais  
+✅ **Footer  **: Comandos de teclado simulados e links sociais  
 
 ## 🎯 Funcionalidades Interativas
 
@@ -136,12 +136,12 @@ Edite os atributos `href` nas linhas:
 - ✅ CSS3 moderno com variáveis, clip-path, gradientes e animações
 - ✅ JavaScript funcional com sistema de abas completo e botão interativo
 - ✅ Acessibilidade (ARIA, navegação por teclado, prefers-reduced-motion, contraste WCAG)
-- ✅ Design fiel à HUD do Cyberpunk 2077
+- ✅ Design fiel à   do Cyberpunk
 - ✅ Estrutura preparada para GitHub Pages com caminhos relativos
 - ✅ 2 cards de projetos estruturados (Construct + Processing)
 - ✅ Placeholders visuais animados para imagens
 
-## 🎮 Elementos da HUD do Cyberpunk 2077 Implementados
+## 🎮 Elementos da   do Cyberpunk Implementados
 
 - ✅ Sistema de abas com sublinhado amarelo e marcadores nos cantos
 - ✅ Molduras com cantos chanfrados via clip-path
