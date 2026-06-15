@@ -16,7 +16,7 @@ portfolio/
 ├── README.md           # Documentação do projeto
 └── assets/img/            # Assets visuais
     ├── foto.jpg        # Foto de perfil
-    ├── construct.jpeg   # Preview do projeto Construct
+    ├── construct.png   # Preview do projeto Construct
     └── processing.jpeg  # Preview do projeto Processing
 ```
 
@@ -101,7 +101,7 @@ O site estará disponível em 2-3 minutos em:
 
 Crie a pasta `assets/img/` e adicione:
 - `foto.jpg` - Sua foto de perfil (recomendado: 400x400px, formato quadrado)
-- `construct.jpeg` - Screenshot do projeto Construct
+- `construct.png` - Screenshot do projeto Construct
 - `processing.jpeg` - Screenshot do projeto Processing
 
 ### Dados Pessoais (index.html)
