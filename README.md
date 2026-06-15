@@ -4,7 +4,7 @@ Portfólio pessoal desenvolvido para a disciplina **Experiência Criativa e IA**
 
 ## 🚀 Demo
 
-Acesse o portfólio: [https://Joao-ALD.github.io/portfolio](https://Joao-ALD.github.io/portfolio)
+Acesse o portfólio: [https://joao-ald.github.io/portifolio/](https://joao-ald.github.io/portifolio/)
 
 ## 📁 Estrutura do Projeto
 
@@ -77,9 +77,9 @@ Revela a curiosidade oculta com:
 ```bash
 git init
 git add .
-git commit -m "Initial commit - Portfólio Cyberpunk 2077 HUD"
+git commit -m "Initial commit - Portfólio estilo Cyberpunk"
 git branch -M main
-git remote add origin https://github.com/seuusuario/portfolio.git
+git remote add origin https://github.com/Joao-ALD/portfolio.git
 git push -u origin main
 ```
 
@@ -93,7 +93,7 @@ git push -u origin main
 ### 3. Aguardar Deploy
 
 O site estará disponível em 2-3 minutos em:  
-`https://seuusuario.github.io/portfolio`
+`https://Joao-ALD.github.io/portfolio`
 
 ## 📝 Personalizações Necessárias
 
