@@ -1506,3 +1506,14 @@ body {
     --cp-border: #666666;
   }
 }
+
+
+/* Added for double image project */
+.slot-image-container.double-image {
+  display: flex;
+}
+
+.slot-image-container.double-image .slot-image {
+  width: 50%;
+  object-fit: cover;
+}
